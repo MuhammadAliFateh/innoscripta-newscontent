@@ -30,6 +30,12 @@ Create a `.env` file in the root of the project and add the following:
 ```env
 REACT_APP_NEWS_API_KEY=your_api_key_here
 
+## Docker Configuration 
+
+Need those run command
+docker build -t innoscripta-newscontent .
+docker run -p 3000:80 innoscripta-newscontent
+
 ### `npm start`
 
 Runs the app in the development mode.\

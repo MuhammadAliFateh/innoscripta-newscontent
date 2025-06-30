@@ -12,5 +12,6 @@ export interface ICardItem {
     title: string
 }
 export interface ICardRequest {
-    articles?: ICardItem[]
+    articles?: ICardItem[],
+    localItem: string
 }

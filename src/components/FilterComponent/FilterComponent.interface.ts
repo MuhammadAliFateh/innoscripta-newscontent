@@ -1,7 +1,8 @@
 export interface IFilterItems {
     itemName: string,
     itemValue: string,
-    itemSetValue: (val: string)=>void 
+    itemSetValue: (val: string)=>void
+    itemList?: string[] 
 }
 export interface IFilterComponent {
     items: IFilterItems[],

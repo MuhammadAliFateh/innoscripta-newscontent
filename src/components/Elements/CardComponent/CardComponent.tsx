@@ -18,6 +18,13 @@ const CardComponent = (request: ICardRequest) => {
     setAuthor(paramAuthor)
     setSource(paramSource)
     setUrlToImage(paramUrlToImage)
+    if(paramAuthor !== ""){
+        let localSourceItem = JSON.parse(localStorage.getItem(request.localItem) || '[]')
+        if(!localSourceItem.includes(paramAuthor)){
+            localSourceItem.push(paramAuthor)
+            localStorage.setItem(request.localItem, JSON.stringify(localSourceItem))
+        }
+    }
   }
   const CardItems = (request: ICardRequest) => {
     return request?.articles?.map((items, index) => {

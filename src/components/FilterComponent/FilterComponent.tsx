@@ -17,9 +17,16 @@ const FilterComponent = (props: IFilterComponent) => {
         setFieldList(prev => [...prev, fieldName]);
     }
   }
+  const renderOption = (itemList : string[] | undefined)=>{
+    if(itemList && itemList.length > 0){
+        return itemList.map((item, index)=>{
+            return <option value={item}>{item}</option>
+        })
+    }
+  }
   const renderFilter = (fields: IFilterItems[]) =>{
     return fields.map((item, index)=>{
-        const {itemName, itemValue, itemSetValue} = item
+        const {itemName, itemValue, itemSetValue, itemList} = item
         return (
         <div className="form-check">
           <input
@@ -29,16 +36,16 @@ const FilterComponent = (props: IFilterComponent) => {
             onChange={()=>checkField(itemName, itemSetValue)}
           />
           <label className="form-check-label">{itemName}</label>
-          <input
-            type="text"
-            className="mt-2 mb-2 form-control"
+          <select className="form-select"
             id="email"
-            placeholder="Search content"
-            name="email"
             value={itemValue}
             style={{display: fieldList && fieldList.includes(itemName) ? "block": "none"}}
             onChange={(e)=>itemSetValue(e.target.value)}
-          />
+            >
+                <option value="">Choose source</option>
+                {renderOption(itemList)}
+            </select>
+          
         </div>
     )
 

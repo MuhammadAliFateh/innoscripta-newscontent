@@ -1,8 +1,6 @@
 import { IModalRequest } from "./ModalComponent.interface";
 
 const ModalComponent = (props: IModalRequest) => {
-    console.log("Testing_A1");
-    console.warn(props);
   return (
     <div className="modal" id="myModal">
       <div className="modal-dialog modal-xl">
