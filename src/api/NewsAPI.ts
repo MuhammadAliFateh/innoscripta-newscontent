@@ -1,5 +1,5 @@
 import axiosInstance from "./axiosInstance"
-const API_KEY = 'eb1601cccf724173a970c0ae297f8f3b';
+const API_KEY = process.env.REACT_APP_NEWS_API_KEY;
 
 export interface ISearchNewsAPIParam {
     q: string,

@@ -6,6 +6,30 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `Required npm and node version`
+npm : 10.2.4
+node: 20.11.0
+
+### `installation`
+npm install
+
+### `Technologies`
+React
+Typescript
+Bootstrap 5
+Axios
+
+## Environment Variables
+
+This project uses environment variables to manage sensitive data like API keys.
+
+### .env Setup
+
+Create a `.env` file in the root of the project and add the following:
+
+```env
+REACT_APP_NEWS_API_KEY=your_api_key_here
+
 ### `npm start`
 
 Runs the app in the development mode.\
