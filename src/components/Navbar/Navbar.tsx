@@ -35,16 +35,11 @@ const Navbar = () => {
                 <select className="form-select w-auto ml-4" onChange={handleSelect} defaultValue="">
                     <option value="" disabled>Select Page</option>
                     <option value="/">Home</option>
-                    <option value="/NewsAPI">News API</option>
+                    <option value="/NYAPI">New york API</option>
                     <option value="/PersonalizedNewsAPIAuthor">News API By Author</option>
                     <option value="/PersonalizedNewsAPICategory">News API By Category</option>
                     <option value="/PersonalizedNewsAPISource">News API By Source</option>
                 </select>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
-                About
-              </Link>
             </li>
           </ul>
         </div>

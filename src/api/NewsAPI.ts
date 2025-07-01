@@ -64,16 +64,12 @@ export const getPersonalizedNewsAPISources = async(preferredSources: string[])=>
 }
 export const getPersonalizedNewsAPICategory = async(preferredCategory: string)=>{
     try{
-        console.log("Testing_A5");
-        console.warn(preferredCategory)
         const response = await axiosInstance.axiosNewsAPIInstance.get(`/top-headlines`, {
             params: {
                 category: preferredCategory, 
                 apiKey: API_KEY
             }
         });
-        console.log("Testing_A5");
-        console.warn(response.data)
         return response.data;
     }
     catch(err){
