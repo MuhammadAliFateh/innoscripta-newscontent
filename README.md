@@ -29,6 +29,10 @@ Create a `.env` file in the root of the project and add the following:
 
 ```env
 REACT_APP_NEWS_API_KEY=your_api_key_here
+REACT_APP_NEWS_API_KEY=your_api_key_here
+NEWS_API_URL=https://newsapi.org/v2
+NY_API_URL=https://api.nytimes.com/svc/search/v2/articlesearch.json
+REACT_APP_NY_API_KEY=X1ccX7iUTvN8H97QmpXU9hrGQGSk5FD7
 
 ## Docker Configuration 
 
